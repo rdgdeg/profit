@@ -61,6 +61,12 @@ return [
             'title' => 'Bike fitting, plans d’entraînement et kinésithérapie à Charleroi.',
             'lead' => 'Studio rue de la Bruyère 240 à Marcinelle. Adrien Gain y réalise des études posturales sur vélo et suit des sportifs en triathlon, cyclisme, running et trail. Marion Van Genechten consulte en kinésithérapie générale et sportive.',
         ],
+        'fitband' => [
+            'kicker' => 'À partir de 200 €',
+            'title' => 'Bike fitting',
+            'text' => 'Étude posturale dynamique sur vélo, au studio de Marcinelle : confort, puissance et aérodynamisme.',
+            'more' => 'Voir l’étude posturale',
+        ],
         'services' => [
             ['velo', 'Plan d’entraînement', 'Étude posturale sur vélo', 'Confort, puissance et aérodynamisme.', 'photo-bikefit.jpg'],
             ['kinesitherapie', 'Kinésithérapie', 'Générale et sportive', 'Réadaptation, au cabinet ou à domicile.', 'photo-kine.webp'],
@@ -490,6 +496,12 @@ return [
             'kicker' => 'Charleroi · Marcinelle · remote',
             'title' => 'Bike fitting, training plans and physiotherapy in Charleroi.',
             'lead' => 'A studio at 240 rue de la Bruyère in Marcinelle. Adrien Gain runs bike fits and coaches triathlon, cycling, running and trail. Marion Van Genechten sees patients for general and sports physiotherapy.',
+        ],
+        'fitband' => [
+            'kicker' => 'From €200',
+            'title' => 'Bike fitting',
+            'text' => 'A dynamic bike fit at the Marcinelle studio: comfort, power and aerodynamics.',
+            'more' => 'See the bike fit',
         ],
         'services' => [
             ['velo', 'Training plan', 'Dynamic bike fit', 'Comfort, power and aerodynamics.', 'photo-bikefit.jpg'],
