@@ -3,10 +3,6 @@
         <p class="kicker"><?= e($C['hero']['kicker']) ?></p>
         <h1><?= e($C['hero']['title']) ?></h1>
         <p class="lead"><?= e($C['hero']['lead']) ?></p>
-        <div class="hero-actions">
-            <a class="btn" href="<?= e($C['links']['book']) ?>" target="_blank" rel="noopener"><?= e($C['book']) ?></a>
-            <a class="btn btn-ghost" href="<?= e(url_to('tarifs')) ?>"><?= e($C['tarifs']['title']) ?></a>
-        </div>
     </div>
     <figure class="hero-figure">
         <img src="<?= e(asset('img/portrait-a.jpg')) ?>" alt="Adrien Gain" width="800" height="800">

@@ -212,7 +212,6 @@ h1, h2, h3, h4 {
 }
 .hero h1 { font-size: clamp(2.6rem, 4.4vw, 4.15rem); max-width: 16ch; }
 .lead { font-size: 1.18rem; max-width: 42ch; color: var(--muted); }
-.hero-actions { display: flex; gap: 0.8rem; flex-wrap: wrap; margin-top: 1.4rem; }
 .hero-figure { position: relative; }
 .hero-figure img {
     width: min(100%, 420px);
