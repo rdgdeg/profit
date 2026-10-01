@@ -1,0 +1,1 @@
+<?php $service = $C['pages']['coaching']; require __DIR__ . '/partials/service.php';
