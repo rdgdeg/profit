@@ -14,31 +14,26 @@
     </figure>
 </section>
 
-<section class="fit-spotlight">
-    <div class="fit-spotlight-inner">
-        <div>
-            <p class="kicker"><?= e($C['fitband']['kicker']) ?></p>
-            <h2><?= e($C['fitband']['title']) ?></h2>
-            <p><?= e($C['fitband']['text']) ?></p>
-            <div class="hero-actions">
-                <a class="btn" href="<?= e($C['links']['book']) ?>" target="_blank" rel="noopener"><?= e($C['book']) ?></a>
-                <a class="btn btn-ghost" href="<?= e(url_to('velo')) ?>"><?= e($C['fitband']['more']) ?></a>
-            </div>
-        </div>
-        <img src="<?= e(asset('img/photo-bikefit.jpg')) ?>" alt="<?= e($C['fitband']['title']) ?>" width="900" height="600">
-    </div>
-</section>
-
 <section class="services reveal">
-    <?php foreach ($C['services'] as [$slug, $heading, $sub, $text, $image]): ?>
-        <a class="service-card" href="<?= e(url_to($slug)) ?>">
-            <img src="<?= e(asset('img/' . $image)) ?>" alt=""<?= $image === 'photo-entreprise.jpg' ? ' class="pos-right"' : '' ?>>
-            <div>
-                <p><?= e($sub) ?></p>
-                <h2><?= e($heading) ?></h2>
-                <span><?= e($text) ?></span>
-            </div>
-        </a>
+    <?php foreach ($C['services'] as $service): ?>
+        <?php
+        [$slug, $heading, $sub, $text, $image] = $service;
+        $reserve = !empty($service[5]);
+        $href = $slug === 'bikefit' ? url_to('velo') : url_to($slug);
+        ?>
+        <article class="service-card">
+            <a href="<?= e($href) ?>">
+                <img src="<?= e(asset('img/' . $image)) ?>" alt=""<?= $image === 'photo-entreprise.jpg' ? ' class="pos-right"' : '' ?>>
+                <div>
+                    <p><?= e($sub) ?></p>
+                    <h2><?= e($heading) ?></h2>
+                    <span><?= e($text) ?></span>
+                </div>
+            </a>
+            <?php if ($reserve): ?>
+                <a class="btn service-book" href="<?= e($C['links']['book']) ?>" target="_blank" rel="noopener"><?= e($C['book']) ?></a>
+            <?php endif; ?>
+        </article>
     <?php endforeach; ?>
 </section>
 
