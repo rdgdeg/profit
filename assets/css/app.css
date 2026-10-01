@@ -294,7 +294,7 @@ h1, h2, h3, h4 {
     transition: transform 0.25s ease, box-shadow 0.25s ease;
 }
 .service-card:hover { transform: translateY(-4px); box-shadow: var(--shadow); }
-.service-card > a {
+.service-card > a:not(.service-book) {
     display: flex;
     flex-direction: column;
     gap: 0.75rem;
@@ -305,9 +305,18 @@ h1, h2, h3, h4 {
 .service-book {
     margin: auto 0.55rem 0.15rem;
     align-self: stretch;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     text-align: center;
+    font-size: 0.86rem;
+    line-height: 1.2;
+    padding: 0.48rem 0.7rem;
+    min-height: 2.35rem;
+    white-space: nowrap;
+    flex: 0 0 auto;
     background: linear-gradient(135deg, #ff5a45 0%, #d63a2e 100%);
-    box-shadow: 0 10px 22px rgba(214, 58, 46, 0.32);
+    box-shadow: 0 8px 16px rgba(214, 58, 46, 0.28);
 }
 .service-card > div {
     display: flex;
@@ -369,15 +378,33 @@ h1, h2, h3, h4 {
 .team h3 { font-size: 1.45rem; margin-bottom: 0.15rem; }
 .role { color: var(--blue); margin: 0; font-weight: 600; font-size: 0.95rem; }
 .place { margin: 0.2rem 0 0.45rem; color: var(--muted); font-size: 0.92rem; }
-.person-links { display: flex; flex-wrap: wrap; gap: 0.35rem 0.9rem; margin: 0 0 0.7rem; font-size: 0.92rem; }
-.person-links a { font-weight: 600; }
+.person-links { display: flex; flex-wrap: wrap; gap: 0.45rem 1rem; margin: 0 0 0.85rem; font-size: 0.92rem; }
+.person-links a {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.35rem;
+    font-weight: 600;
+    text-decoration: none;
+}
+.person-links svg { width: 1.05rem; height: 1.05rem; fill: var(--blue-deep); flex-shrink: 0; }
 .team article > div { display: flex; flex-direction: column; flex: 1; padding: 0 0.45rem; }
 .team details { font-size: 0.9rem; margin-top: auto; }
 .team summary {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    list-style: none;
     cursor: pointer;
     font-weight: 600;
-    color: var(--ink);
+    font-size: 0.9rem;
+    color: white;
+    background: linear-gradient(135deg, var(--blue) 0%, var(--blue-deep) 100%);
+    border-radius: 999px;
+    padding: 0.5rem 0.85rem;
+    box-shadow: 0 8px 16px rgba(47, 107, 255, 0.24);
 }
+.team summary::-webkit-details-marker { display: none; }
+.team summary::marker { content: ""; }
 .team ul, .prose ul, .price-card ul { margin: 0.55rem 0 0; padding-left: 1.05rem; }
 .team li { margin: 0.15rem 0; color: var(--muted); }
 

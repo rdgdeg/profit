@@ -63,7 +63,7 @@ return [
         ],
         'services' => [
             ['bikefit', 'Bike fitting', 'À partir de 200 €', 'Étude posturale dynamique sur vélo, au studio de Marcinelle.', 'photo-bikefit.jpg', true],
-            ['velo', 'Plan d’entraînement', 'Étude posturale sur vélo', 'Confort, puissance et aérodynamisme.', 'photo-zwift.jpg', 'Découvrir'],
+            ['velo', 'Plan d’entraînement', 'Cyclisme, running, trail, triathlon', 'Un contact constant avec un entraîneur diplômé.', 'photo-zwift.jpg', 'Voir le plan'],
             ['kinesitherapie', 'Kinésithérapie', 'Générale et sportive', 'Réadaptation, au cabinet ou à domicile.', 'photo-kine.webp', 'Prendre rendez-vous'],
         ],
         'pages' => [
@@ -219,6 +219,7 @@ return [
         ],
         'team' => [
             'title' => 'L’équipe',
+            'formations_cta' => 'Découvrir les formations',
             'people' => [
                 [
                     'name' => 'Adrien Gain',
@@ -494,7 +495,7 @@ return [
         ],
         'services' => [
             ['bikefit', 'Bike fitting', 'From €200', 'A dynamic bike fit at the Marcinelle studio.', 'photo-bikefit.jpg', true],
-            ['velo', 'Training plan', 'Dynamic bike fit', 'Comfort, power and aerodynamics.', 'photo-zwift.jpg', 'Discover'],
+            ['velo', 'Training plan', 'Cycling, running, trail, triathlon', 'Regular contact with a qualified coach.', 'photo-zwift.jpg', 'See the plan'],
             ['kinesitherapie', 'Physiotherapy', 'General and sports', 'Rehab at the studio or at home.', 'photo-kine.webp', 'Book an appointment'],
         ],
         'pages' => [
@@ -650,6 +651,7 @@ return [
         ],
         'team' => [
             'title' => 'The team',
+            'formations_cta' => 'See the training',
             'people' => [
                 [
                     'name' => 'Adrien Gain',

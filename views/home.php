@@ -52,11 +52,17 @@
                     <p class="role"><?= e($person['role']) ?></p>
                     <p class="place"><?= e($person['place']) ?></p>
                     <p class="person-links">
-                        <a href="<?= e($C['links'][$person['tel']]) ?>"><?= e($person['tel_label']) ?></a>
-                        <a href="<?= e($C['links'][$person['mail']]) ?>"><?= $lang === 'fr' ? 'Écrire' : 'Email' ?></a>
+                        <a href="<?= e($C['links'][$person['tel']]) ?>">
+                            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8.2 3.8h2.1l1.2 3.1-1.5 1.1a12.4 12.4 0 0 0 5.9 5.9l1.1-1.5 3.1 1.2v2.1c0 .8-.6 1.5-1.4 1.6A15.2 15.2 0 0 1 3.6 6.2c.1-.8.8-1.4 1.6-1.4h3z"/></svg>
+                            <?= e($person['tel_label']) ?>
+                        </a>
+                        <a href="<?= e($C['links'][$person['mail']]) ?>">
+                            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 6.5h16a1 1 0 0 1 1 1v9a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1v-9a1 1 0 0 1 1-1zm8 6.2 7-4.4H5z"/></svg>
+                            <?= $lang === 'fr' ? 'Écrire' : 'Email' ?>
+                        </a>
                     </p>
                     <details>
-                        <summary><?= e($person['formations_title']) ?></summary>
+                        <summary><?= e($C['team']['formations_cta']) ?></summary>
                         <ul>
                             <?php foreach ($person['formations'] as $item): ?>
                                 <li><?= e($item) ?></li>
