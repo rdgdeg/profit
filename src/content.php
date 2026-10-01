@@ -62,8 +62,9 @@ return [
             'lead' => 'Studio rue de la Bruyère 240 à Marcinelle. Adrien Gain y réalise des études posturales sur vélo et suit des sportifs en triathlon, cyclisme, running et trail. Marion Van Genechten consulte en kinésithérapie générale et sportive.',
         ],
         'services' => [
-            ['velo', 'Plan d’entraînement', 'Étude posturale sur vélo', 'Confort, puissance et aérodynamisme.', 'photo-zwift.jpg'],
             ['bikefit', 'Bike fitting', 'À partir de 200 €', 'Étude posturale dynamique sur vélo, au studio de Marcinelle.', 'photo-bikefit.jpg', true],
+            ['velo', 'Plan d’entraînement', 'Étude posturale sur vélo', 'Confort, puissance et aérodynamisme.', 'photo-zwift.jpg', 'Découvrir'],
+            ['kinesitherapie', 'Kinésithérapie', 'Générale et sportive', 'Réadaptation, au cabinet ou à domicile.', 'photo-kine.webp', 'Prendre rendez-vous'],
         ],
         'pages' => [
             'coaching' => [
@@ -492,8 +493,9 @@ return [
             'lead' => 'A studio at 240 rue de la Bruyère in Marcinelle. Adrien Gain runs bike fits and coaches triathlon, cycling, running and trail. Marion Van Genechten sees patients for general and sports physiotherapy.',
         ],
         'services' => [
-            ['velo', 'Training plan', 'Dynamic bike fit', 'Comfort, power and aerodynamics.', 'photo-zwift.jpg'],
             ['bikefit', 'Bike fitting', 'From €200', 'A dynamic bike fit at the Marcinelle studio.', 'photo-bikefit.jpg', true],
+            ['velo', 'Training plan', 'Dynamic bike fit', 'Comfort, power and aerodynamics.', 'photo-zwift.jpg', 'Discover'],
+            ['kinesitherapie', 'Physiotherapy', 'General and sports', 'Rehab at the studio or at home.', 'photo-kine.webp', 'Book an appointment'],
         ],
         'pages' => [
             'coaching' => [

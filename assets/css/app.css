@@ -258,11 +258,28 @@ h1, h2, h3, h4 {
     to { opacity: 1; transform: none; }
 }
 
+.home-band {
+    position: relative;
+    isolation: isolate;
+    padding-top: 2.2rem;
+    padding-bottom: 2.4rem;
+}
+.home-band::before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    width: 100vw;
+    transform: translateX(-50%);
+}
+.band-white::before { background: #fff; }
 .services {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(3, 1fr);
     gap: 1.25rem;
-    padding-bottom: 4rem;
+    padding-bottom: 2.4rem;
 }
 .service-card {
     display: flex;
@@ -286,8 +303,9 @@ h1, h2, h3, h4 {
     color: inherit;
 }
 .service-book {
-    margin: 0 0.55rem 0.15rem;
-    align-self: flex-start;
+    margin: auto 0.55rem 0.15rem;
+    align-self: stretch;
+    text-align: center;
     background: linear-gradient(135deg, #ff5a45 0%, #d63a2e 100%);
     box-shadow: 0 10px 22px rgba(214, 58, 46, 0.32);
 }
@@ -329,7 +347,7 @@ h1, h2, h3, h4 {
     min-height: 2.9em;
 }
 
-.team { padding-bottom: 3.4rem; }
+.team { padding-top: 2.2rem; padding-bottom: 2.4rem; }
 .team-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1.15rem; align-items: stretch; }
 .team article {
     display: flex;
@@ -363,7 +381,7 @@ h1, h2, h3, h4 {
 .team ul, .prose ul, .price-card ul { margin: 0.55rem 0 0; padding-left: 1.05rem; }
 .team li { margin: 0.15rem 0; color: var(--muted); }
 
-.reviews { padding-bottom: 2.4rem; }
+.reviews { padding-bottom: 2.4rem; margin-bottom: 0; }
 .section-head { display: flex; justify-content: space-between; gap: 1rem; align-items: end; margin-bottom: 1rem; }
 .section-head h2, .team .section-head h2 { font-size: clamp(2rem, 3.4vw, 2.6rem); }
 .section-head p { color: var(--muted); max-width: 36ch; margin: 0; }
@@ -399,12 +417,12 @@ blockquote span { font-weight: 600; letter-spacing: 0.04em; }
     align-items: center;
     justify-content: space-between;
     gap: 1.5rem;
-    background: #fff;
+    background: transparent;
     color: var(--ink);
-    border: 1px solid var(--line);
-    border-radius: 1.15rem;
-    padding: 1.25rem 1.4rem;
-    margin-bottom: 3.2rem;
+    border: 0;
+    border-radius: 0;
+    padding: 2.2rem 0 2.6rem;
+    margin-bottom: 0;
 }
 .instagram h2 { font-size: 1.7rem; margin-bottom: 0.2rem; }
 .instagram p { max-width: 52ch; color: var(--muted); margin: 0; }

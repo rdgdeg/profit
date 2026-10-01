@@ -14,11 +14,11 @@
     </figure>
 </section>
 
-<section class="services reveal">
+<section class="services home-band band-white reveal">
     <?php foreach ($C['services'] as $service): ?>
         <?php
         [$slug, $heading, $sub, $text, $image] = $service;
-        $reserve = !empty($service[5]);
+        $action = $service[5] ?? null;
         $href = $slug === 'bikefit' ? url_to('velo') : url_to($slug);
         ?>
         <article class="service-card">
@@ -30,8 +30,10 @@
                     <span><?= e($text) ?></span>
                 </div>
             </a>
-            <?php if ($reserve): ?>
+            <?php if ($action === true): ?>
                 <a class="btn service-book" href="<?= e($C['links']['book']) ?>" target="_blank" rel="noopener"><?= e($C['book']) ?></a>
+            <?php elseif (is_string($action)): ?>
+                <a class="btn service-book" href="<?= e($href) ?>"><?= e($action) ?></a>
             <?php endif; ?>
         </article>
     <?php endforeach; ?>
@@ -67,7 +69,7 @@
     </div>
 </section>
 
-<section class="reviews reveal">
+<section class="reviews home-band band-white reveal">
     <div class="section-head">
         <h2><?= e($C['reviews']['title']) ?></h2>
         <p><?= e($C['reviews']['lead']) ?></p>
