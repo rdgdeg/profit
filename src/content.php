@@ -18,7 +18,7 @@ $reviews = [
 $links = [
     'book' => 'https://calendar.app.google/FJ2fs48nuAak519r5',
     'instagram' => 'https://www.instagram.com/adriengain_profitbe/',
-    'facebook' => 'https://www.facebook.com/profile.php?id=100094413586785',
+    'facebook' => 'https://www.facebook.com/profile.php?id=61553046915417',
     'facebook_pro' => 'https://www.facebook.com/adriengainpro/',
     'linkedin' => 'https://www.linkedin.com/in/adrien-gain-95067b67/',
     'maps' => 'https://www.google.com/maps/search/?api=1&query=Rue+de+la+Bruy%C3%A8re+240+6001+Marcinelle',
@@ -96,31 +96,51 @@ return [
                 'title' => 'Plan d’entraînement et étude posturale sur vélo',
                 'kicker' => 'Cyclisme, running, trail, triathlon',
                 'image' => 'photo-bikefit.jpg',
-                'photos' => [
-                    ['photo-zwift.jpg', 'Entraînements sur votre plateforme favorite'],
-                    ['photo-nolio.png', 'Nöliö, le suivi du plan d’entraînement'],
-                    ['photo-analyse.jpg', 'Analyse vidéo du positionnement'],
-                    ['photo-selle.jpg', 'Capteur de pression de selle Velometrik'],
-                    ['photo-selles.webp', 'Essai de selles haut de gamme'],
-                    ['photo-aero-ecran.jpg', 'Gains en puissance et en vitesse, en temps réel'],
-                    ['photo-bikefit.jpg', 'Étude posturale dynamique sur vélo'],
-                ],
                 'paragraphs' => [
                     'Vous cherchez un plan d’entraînement en cyclisme, running, trail ou triathlon, avec un contact constant avec un entraîneur diplômé ?',
                     'Vous désirez optimiser votre positionnement sur votre vélo afin de trouver plus de confort, être plus performant et accroître votre aérodynamisme ?',
                     'Vous cherchez à être testé sur le terrain grâce à un appareil de mesure du lactate, et à vous entraîner selon des zones de travail déterminées ?',
+                    'Votre niveau sportif requiert un travail supplémentaire en dehors des entraînements propres à votre discipline, collective ou individuelle ?',
                 ],
-                'list_title' => 'Sur place',
-                'list' => [
-                    'Entraînements applicables sur votre plateforme favorite, dont Nöliö',
-                    'Analyse du cycle de pédalage et de la position aérodynamique',
-                    'Capteur de pression de selle Velometrik et essai de selles haut de gamme',
-                    'Simulation de soufflerie Bioracer Aero, en exclusivité en Wallonie',
+                'sections' => [
+                    [
+                        'title' => 'Plan d’entraînement',
+                        'paragraphs' => [
+                            'Un plan est envisageable en triathlon, cyclisme, running et trail. Une première entrevue détermine vos objectifs. Des tests à l’effort sur home-trainer, via le capteur Lactate Scout 4, analysent votre progression et précisent vos zones de travail.',
+                        ],
+                        'photos' => [
+                            ['photo-zwift.jpg', 'Entraînements sur votre plateforme favorite'],
+                            ['photo-nolio.png', 'Nöliö, le suivi du plan d’entraînement'],
+                        ],
+                    ],
+                    [
+                        'title' => 'Étude posturale dynamique',
+                        'paragraphs' => [
+                            'Analyse selon vos préférences motrices, votre pratique et vos attentes (aérodynamisme, puissance, confort). Après une anamnèse (tests posturaux et de mobilité) et une analyse du cycle de pédalage, les réglages sont appliqués sur votre vélo — route, triathlon, VTT — ainsi que les cales.',
+                            'Le capteur de pression de selle Velometrik sert à vous placer correctement. Un kit de selles haut de gamme est à disposition pendant l’étude. Pour les athlètes plus compétitifs, et en exclusivité en Wallonie, la simulation de soufflerie Bioracer Aero chiffre vos gains en puissance et en vitesse, en temps réel.',
+                            'Vous repartez avec un rapport avant / après, et un programme de renforcement et de stretching peut être proposé.',
+                        ],
+                        'photos' => [
+                            ['photo-analyse.jpg', 'Analyse vidéo du positionnement'],
+                            ['photo-aero-ecran.jpg', 'Gains en puissance et en vitesse, en temps réel'],
+                            ['photo-bikefit.jpg', 'Étude posturale dynamique sur vélo'],
+                        ],
+                    ],
+                    [
+                        'title' => 'Sur place',
+                        'list' => [
+                            'Entraînements applicables sur votre plateforme favorite, dont Nöliö',
+                            'Analyse du cycle de pédalage et de la position aérodynamique',
+                            'Capteur de pression de selle Velometrik et essai de selles haut de gamme',
+                            'Simulation de soufflerie Bioracer Aero, en exclusivité en Wallonie',
+                        ],
+                        'photos' => [
+                            ['photo-selle.jpg', 'Capteur de pression de selle Velometrik'],
+                            ['photo-selles.webp', 'Essai de selles haut de gamme'],
+                        ],
+                    ],
                 ],
-                'blocks' => [
-                    ['Plan d’entraînement', 'Un plan est envisageable en triathlon, cyclisme, running et trail. Une première entrevue détermine vos objectifs. Des tests à l’effort sur home-trainer, via le capteur Lactate Scout 4, analysent votre progression et précisent vos zones de travail.'],
-                    ['Étude posturale dynamique', 'Analyse selon vos préférences motrices, votre pratique et vos attentes (aérodynamisme, puissance, confort). Après une anamnèse (tests posturaux et de mobilité) et une analyse du cycle de pédalage, les réglages sont appliqués sur votre vélo — route, triathlon, VTT — ainsi que les cales. Vous repartez avec un rapport avant / après. Un programme de renforcement et de stretching peut être proposé.'],
-                ],
+                'close' => 'Quel que soit votre niveau ou votre discipline, l’objectif est de vous aider à atteindre votre plus haut niveau.',
             ],
             'entreprise' => [
                 'title' => 'Coaching en entreprise',
@@ -132,12 +152,28 @@ return [
                     'Certaines activités amènent les équipes à sortir de leur zone de confort, à se dépasser, et à développer combativité et coopération. Les bénéfices se retrouvent dans le bien-être, et aussi dans la productivité.',
                 ],
                 'list_title' => 'Bénéfices pour l’employeur',
-                'list' => [
-                    'Réduction de l’absentéisme et des accidents de travail',
-                    'Amélioration des relations, de la qualité du travail et de l’engagement',
-                    'Attractivité de l’entreprise et impact sur la culture',
-                    'Meilleur moral, concentration, satisfaction, moins de stress',
-                    'Réduction des coûts de santé et retour sur investissement',
+                'groups' => [
+                    ['Changements positifs', [
+                        'Réduction de l’absentéisme',
+                        'Réduction des accidents de travail',
+                        'Amélioration des relations au travail',
+                        'Amélioration de la qualité du travail',
+                        'Amélioration de l’engagement des salariés',
+                        'Amélioration de l’attractivité de l’entreprise',
+                    ]],
+                    ['Bénéfices psycho-sociaux', [
+                        'Amélioration du moral',
+                        'Amélioration de la concentration',
+                        'Impact positif sur la culture d’entreprise',
+                        'Amélioration des rapports sociaux',
+                        'Amélioration de la satisfaction au travail',
+                        'Réduction du stress',
+                    ]],
+                    ['Bénéfices financiers', [
+                        'Réduction des coûts de santé',
+                        'Réduction des coûts liés à l’absentéisme',
+                        'Retour sur investissement',
+                    ]],
                 ],
                 'blocks' => [
                     ['Comment cela se passe', 'Séance d’information et/ou questionnaire : besoins, attentes, nature des activités, mise en place concrète. Puis définition du programme, lancement du projet et suivi des résultats, avec ajustements.'],
@@ -152,11 +188,20 @@ return [
                     'Au fil des consultations, le thérapeute propose un traitement adapté à la pathologie générale ou sportive, à l’écoute, en respectant votre rythme de progression.',
                     'Un suivi pluridisciplinaire peut être indiqué (ostéopathe, posturologue, podologue, préparateur physique), ainsi qu’un travail en autonomie, au cabinet ou à domicile.',
                 ],
-                'list_title' => 'Prise de rendez-vous',
+                'list_title' => 'Spécialités',
                 'list' => [
-                    'Marion Van Genechten — +32 494 10 88 13',
-                    'Rue de la Bruyère 240, 6001 Marcinelle',
-                    'Déplacement à domicile possible (grand Charleroi)',
+                    'Prise en charge par le mouvement : souplesse, renforcement musculaire, travail de la posture',
+                    'Traitement par ondes de choc : méthode non invasive pour diminuer les douleurs et favoriser la guérison des tissus musculo-tendineux',
+                ],
+                'booking' => [
+                    'title' => 'Prise de rendez-vous',
+                    'name' => 'Marion Van Genechten',
+                    'phone' => '+32 494 10 88 13',
+                    'phone_href' => 'marion_tel',
+                    'mail' => 'marionvege@hotmail.com',
+                    'mail_href' => 'marion_mail',
+                    'address' => 'Rue de la Bruyère 240, 6001 Marcinelle',
+                    'note' => 'Déplacement à domicile possible (grand Charleroi)',
                 ],
             ],
             'mentions' => [
@@ -236,6 +281,12 @@ return [
         'tarifs' => [
             'title' => 'Tarifs',
             'updated' => 'Mise à jour : 1er août 2025',
+            'jumps' => [
+                ['suivi', 'Suivi en ligne'],
+                ['etude', 'Étude posturale'],
+                ['valise', 'Location valise'],
+                ['plans', 'Plans préconçus'],
+            ],
             'from' => 'À partir de',
             'month' => 'mois',
             'includes' => 'Inclus',
@@ -342,6 +393,24 @@ return [
                     'L’objectif est de progresser sans fatigue excessive ni blessure. Le corps récupère mieux et s’adapte. Pour l’endurance, cette base aérobie est essentielle sur la durée.',
                     'La méthode invite à écouter le corps. Les jours bas, mieux vaut rester à faible intensité. Sur 10 heures par semaine, 8 heures restent faciles et 2 heures sont intenses.',
                     'Équilibrer faible et haute intensité maximise les bénéfices et garde une pratique durable. Mise à jour : 28 janvier 2025.',
+                ],
+            ],
+            [
+                'slug' => 'entrainement-a-distance',
+                'date' => '2024-02-14',
+                'category' => 'Plan d’entraînement',
+                'title' => 'Les avantages de l’entraînement à distance pour les sports d’endurance',
+                'excerpt' => 'Flexibilité, entraîneur certifié, plan personnalisé : s’entraîner où que l’on soit.',
+                'image' => 'photo-distance.png',
+                'body' => [
+                    'Le sport d’endurance est exigeant. Le triathlon en est un exemple : concilier natation, cyclisme et course à pied demande une planification rigoureuse. L’entraînement à distance est une des façons d’organiser ce travail.',
+                    'Flexibilité. Les séances se placent dans un emploi du temps chargé, sans devoir coordonner les horaires de piscine, de piste et de route.',
+                    'Un entraîneur certifié. Les plateformes en ligne et les applications de suivi rendent ce coaching accessible, quel que soit le lieu de résidence.',
+                    'Personnalisation. Le programme suit les objectifs, le niveau et les contraintes de chacun.',
+                    'Temps et argent. Les déplacements et les adhésions à des clubs sortent de l’équation.',
+                    'Motivation. Le suivi, une communauté de pairs et un coach à qui rendre compte aident à rester régulier.',
+                    'Conseils pratiques. Gardez un contact régulier et décrivez comment les séances se sont vraiment passées. Apprenez les outils que vous utilisez déjà : montre GPS, capteurs de fréquence cardiaque ou de puissance, applications de suivi. Fixez des objectifs clairs avec votre coach. Restez prêt à ajuster le plan en cas de blessure, de maladie ou de changement de calendrier.',
+                    'L’entraînement à distance permet de s’entraîner efficacement, où que l’on soit, pour une compétition ou simplement pour le plaisir. Mise à jour : 14 février 2024.',
                 ],
             ],
             [
@@ -462,31 +531,51 @@ return [
                 'title' => 'Training plans and dynamic bike fitting',
                 'kicker' => 'Cycling, running, trail, triathlon',
                 'image' => 'photo-bikefit.jpg',
-                'photos' => [
-                    ['photo-zwift.jpg', 'Training on the platform you already use'],
-                    ['photo-nolio.png', 'Nöliö, follow-up for the training plan'],
-                    ['photo-analyse.jpg', 'Video analysis of the position'],
-                    ['photo-selle.jpg', 'Velometrik saddle pressure sensor'],
-                    ['photo-selles.webp', 'Try a range of high-end saddles'],
-                    ['photo-aero-ecran.jpg', 'Power and speed gains, in real time'],
-                    ['photo-bikefit.jpg', 'Dynamic bike fitting'],
-                ],
                 'paragraphs' => [
                     'Looking for a cycling, running, trail or triathlon plan, with regular contact with a qualified coach?',
                     'Want a better position on the bike: more comfort, more performance, more aerodynamics?',
                     'Want field testing with a lactate meter, then training zones you can actually use?',
+                    'Does your level call for extra work outside the sessions of your sport, team or individual?',
                 ],
-                'list_title' => 'In the studio',
-                'list' => [
-                    'Sessions you can load on your usual platform, including Nöliö',
-                    'Pedal-stroke and aerodynamic position analysis',
-                    'Velometrik saddle-pressure sensor and a range of high-end saddles',
-                    'Bioracer Aero wind-tunnel simulation, exclusive in Wallonia',
+                'sections' => [
+                    [
+                        'title' => 'Training plan',
+                        'paragraphs' => [
+                            'Plans are available for triathlon, cycling, running and trail. A first meeting sets the goals. Effort tests on a home trainer, with the Lactate Scout 4 sensor, track progress and define training zones.',
+                        ],
+                        'photos' => [
+                            ['photo-zwift.jpg', 'Training on the platform you already use'],
+                            ['photo-nolio.png', 'Nöliö, follow-up for the training plan'],
+                        ],
+                    ],
+                    [
+                        'title' => 'Dynamic bike fit',
+                        'paragraphs' => [
+                            'The fit follows your motor preferences, your discipline and what you want (aero, power, comfort). After posture and mobility tests and a pedal-stroke analysis, adjustments are made on your bike — road, triathlon, MTB — including cleats.',
+                            'The Velometrik saddle-pressure sensor is used to place you correctly. A set of high-end saddles is available during the fit. For more competitive athletes, and exclusive in Wallonia, the Bioracer Aero wind-tunnel simulation estimates power and speed gains in real time.',
+                            'You leave with a before / after report. A strength and stretching programme can be added.',
+                        ],
+                        'photos' => [
+                            ['photo-analyse.jpg', 'Video analysis of the position'],
+                            ['photo-aero-ecran.jpg', 'Power and speed gains, in real time'],
+                            ['photo-bikefit.jpg', 'Dynamic bike fitting'],
+                        ],
+                    ],
+                    [
+                        'title' => 'In the studio',
+                        'list' => [
+                            'Sessions you can load on your usual platform, including Nöliö',
+                            'Pedal-stroke and aerodynamic position analysis',
+                            'Velometrik saddle-pressure sensor and a range of high-end saddles',
+                            'Bioracer Aero wind-tunnel simulation, exclusive in Wallonia',
+                        ],
+                        'photos' => [
+                            ['photo-selle.jpg', 'Velometrik saddle pressure sensor'],
+                            ['photo-selles.webp', 'Try a range of high-end saddles'],
+                        ],
+                    ],
                 ],
-                'blocks' => [
-                    ['Training plan', 'Plans are available for triathlon, cycling, running and trail. A first meeting sets the goals. Effort tests on a home trainer, with the Lactate Scout 4 sensor, track progress and define training zones.'],
-                    ['Dynamic bike fit', 'The fit follows your motor preferences, your discipline and what you want (aero, power, comfort). After posture and mobility tests and a pedal-stroke analysis, adjustments are made on your bike — road, triathlon, MTB — including cleats. You leave with a before / after report. A strength and stretching programme can be added.'],
-                ],
+                'close' => 'Whatever your level or your sport, the aim is to help you reach your highest level.',
             ],
             'entreprise' => [
                 'title' => 'Corporate coaching',
@@ -498,12 +587,28 @@ return [
                     'The right activities take teams out of their usual comfort zone, and build both drive and cooperation. The gain is wellbeing, and also productivity.',
                 ],
                 'list_title' => 'What the employer gets',
-                'list' => [
-                    'Less absenteeism and fewer workplace accidents',
-                    'Better relationships, work quality and engagement',
-                    'A more attractive company and a stronger culture',
-                    'Better morale, focus and job satisfaction, less stress',
-                    'Lower health costs and a real return',
+                'groups' => [
+                    ['Positive changes', [
+                        'Less absenteeism',
+                        'Fewer workplace accidents',
+                        'Better working relationships',
+                        'Better quality of work',
+                        'Stronger employee engagement',
+                        'A more attractive company',
+                    ]],
+                    ['Psychosocial benefits', [
+                        'Better morale',
+                        'Better concentration',
+                        'A positive effect on company culture',
+                        'Better social relationships',
+                        'Higher job satisfaction',
+                        'Less stress',
+                    ]],
+                    ['Financial benefits', [
+                        'Lower health costs',
+                        'Lower costs linked to absenteeism',
+                        'A return on the investment',
+                    ]],
                 ],
                 'blocks' => [
                     ['How it works', 'An information session and/or a questionnaire: needs, expectations, which activities, and how they fit the company. Then the programme is defined, launched and adjusted from the results.'],
@@ -518,11 +623,20 @@ return [
                     'Session after session, treatment matches a general or sports condition, at your pace.',
                     'A multidisciplinary path can be suggested (osteopath, posturologist, podiatrist, strength coach), plus work you do on your own at the studio or at home.',
                 ],
-                'list_title' => 'Book an appointment',
+                'list_title' => 'Specialties',
                 'list' => [
-                    'Marion Van Genechten — +32 494 10 88 13',
-                    'Rue de la Bruyère 240, 6001 Marcinelle',
-                    'Home visits possible across greater Charleroi',
+                    'Care through movement: flexibility, strength and posture',
+                    'Shockwave therapy: a non-invasive way to reduce pain and help muscle and tendon tissue recover',
+                ],
+                'booking' => [
+                    'title' => 'Book an appointment',
+                    'name' => 'Marion Van Genechten',
+                    'phone' => '+32 494 10 88 13',
+                    'phone_href' => 'marion_tel',
+                    'mail' => 'marionvege@hotmail.com',
+                    'mail_href' => 'marion_mail',
+                    'address' => 'Rue de la Bruyère 240, 6001 Marcinelle',
+                    'note' => 'Home visits possible across greater Charleroi',
                 ],
             ],
             'mentions' => [
@@ -601,6 +715,12 @@ return [
         ],
         'tarifs' => [
             'title' => 'Prices',
+            'jumps' => [
+                ['suivi', 'Online coaching'],
+                ['etude', 'Bike fit'],
+                ['valise', 'Travel case'],
+                ['plans', 'Ready-made plans'],
+            ],
             'updated' => 'Updated 1 August 2025',
             'from' => 'From',
             'month' => 'month',
@@ -708,6 +828,24 @@ return [
                     'The goal is progress without excess fatigue or injury. The body recovers and adapts. For endurance athletes, that aerobic base is what lasts.',
                     'The method asks you to listen. On low days, stay easy. In a 10-hour week, 8 hours stay easy and 2 hours are intense.',
                     'Balancing easy and hard work keeps the gains and the habit. Updated 28 January 2025.',
+                ],
+            ],
+            [
+                'slug' => 'entrainement-a-distance',
+                'date' => '2024-02-14',
+                'category' => 'Training plan',
+                'title' => 'Remote training for endurance sports',
+                'excerpt' => 'Flexibility, a certified coach, a plan built around you — wherever you live.',
+                'image' => 'photo-distance.png',
+                'body' => [
+                    'Endurance sport is demanding. Triathlon is a clear example: swimming, cycling and running together take careful planning and steady discipline. Remote coaching is one way athletes now organise that work.',
+                    'Flexibility. Sessions fit a busy diary, without coordinating pool, track and road times.',
+                    'A certified coach. Online platforms and tracking apps make that coaching available wherever you live.',
+                    'A personal plan. The programme follows your goals, your fitness and your constraints.',
+                    'Time and money. Travel and club memberships drop out of the equation.',
+                    'Motivation. Tracking, a peer community and a coach to report to help keep the work consistent.',
+                    'Practical points. Stay in regular contact and report how sessions actually went. Learn the tools you already use: GPS watch, heart-rate or power sensors, training apps. Set clear goals with your coach. Stay ready to adjust for injury, illness or a change of calendar.',
+                    'Remote coaching is a way to train properly from wherever you are, for a race or simply for the pleasure of it. Updated 14 February 2024.',
                 ],
             ],
             [

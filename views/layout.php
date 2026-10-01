@@ -32,9 +32,17 @@ $switchHref = url_to($switchPage === 'home' ? 'home' : $switchPage, $other);
         <?php foreach ($C['nav'] as [$slug, $label]): ?>
             <a href="<?= e(url_to($slug)) ?>" <?= ($page === $slug || ($page === 'article' && $slug === 'blog')) ? 'aria-current="page"' : '' ?>><?= e($label) ?></a>
         <?php endforeach; ?>
-        <a class="lang" href="<?= e($switchHref) ?>"><?= $other === 'en' ? 'EN' : 'FR' ?></a>
+        <a class="lang" href="<?= e($switchHref) ?>" hreflang="<?= e($other) ?>" lang="<?= e($other) ?>" aria-label="<?= $other === 'en' ? 'English' : 'Français' ?>">
+            <?php if ($other === 'en'): ?>
+                <svg class="flag" viewBox="0 0 60 30" aria-hidden="true"><rect width="60" height="30" fill="#012169"/><path d="M0 0 L60 30 M60 0 L0 30" stroke="#fff" stroke-width="8"/><path d="M0 0 L60 30 M60 0 L0 30" stroke="#C8102E" stroke-width="4"/><path d="M30 0 V30 M0 15 H60" stroke="#fff" stroke-width="14"/><path d="M30 0 V30 M0 15 H60" stroke="#C8102E" stroke-width="8"/></svg>
+            <?php else: ?>
+                <svg class="flag" viewBox="0 0 18 12" aria-hidden="true"><rect width="6" height="12" fill="#0055A4"/><rect x="6" width="6" height="12" fill="#fff"/><rect x="12" width="6" height="12" fill="#EF4135"/></svg>
+            <?php endif; ?>
+            <?= $other === 'en' ? 'EN' : 'FR' ?>
+        </a>
         <a class="book" href="<?= e($C['links']['book']) ?>" target="_blank" rel="noopener"><?= e($C['book']) ?></a>
     </nav>
+    <?php require __DIR__ . '/partials/follow.php'; ?>
 </header>
 <main id="content">
     <?= $body ?>
@@ -56,11 +64,7 @@ $switchHref = url_to($switchPage === 'home' ? 'home' : $switchPage, $other);
             <a href="<?= e($C['links']['maps']) ?>" target="_blank" rel="noopener"><?= e($C['contact']['address']) ?></a>
             <a href="<?= e($C['links']['adrien_tel']) ?>">+32 474 48 82 73</a>
             <a href="<?= e($C['links']['adrien_mail']) ?>">gain.adrien@gmail.com</a>
-            <div class="socials">
-                <a href="<?= e($C['links']['instagram']) ?>" target="_blank" rel="noopener">Instagram</a>
-                <a href="<?= e($C['links']['facebook']) ?>" target="_blank" rel="noopener">Facebook</a>
-                <a href="<?= e($C['links']['linkedin']) ?>" target="_blank" rel="noopener">LinkedIn</a>
-            </div>
+            <?php require __DIR__ . '/partials/follow.php'; ?>
             <button type="button" class="cookie-manage" data-cookie-manage><?= e($C['cookies_manage']) ?></button>
         </div>
     </div>
