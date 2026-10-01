@@ -544,7 +544,16 @@ blockquote span { font-weight: 600; letter-spacing: 0.04em; }
 .tone-1 { background: #e7efff; }
 .tone-2 { background: #e7f8ef; }
 .tone-3 { background: #fff3df; }
-.group .point-grid li { background: rgba(255, 255, 255, 0.78); }
+.group .point-grid li {
+    display: flex;
+    align-items: center;
+    gap: 0.55rem;
+    background: rgba(255, 255, 255, 0.78);
+}
+.group .point-grid svg { width: 1.15rem; height: 1.15rem; flex-shrink: 0; fill: currentColor; }
+.tone-1 .point-grid svg { color: #1736c9; }
+.tone-2 .point-grid svg { color: #12815c; }
+.tone-3 .point-grid svg { color: #b86a12; }
 .booking {
     margin: 1.5rem 0 0.2rem;
     background: #e5f6f0;
