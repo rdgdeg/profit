@@ -5,7 +5,7 @@
         <p class="lead"><?= e($C['hero']['lead']) ?></p>
         <div class="hero-actions">
             <a class="btn" href="<?= e($C['links']['book']) ?>" target="_blank" rel="noopener"><?= e($C['book']) ?></a>
-            <a class="btn btn-ghost" href="<?= e(url_to('tarifs')) ?>"><?= e($C['nav'][6][1]) ?></a>
+            <a class="btn btn-ghost" href="<?= e(url_to('tarifs')) ?>"><?= e($C['tarifs']['title']) ?></a>
         </div>
     </div>
     <figure class="hero-figure">

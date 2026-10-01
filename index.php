@@ -19,7 +19,7 @@ if ($path === 'robots.txt') {
 
 if ($path === 'sitemap.xml') {
     header('Content-Type: application/xml; charset=UTF-8');
-    $pages = ['', 'coaching', 'velo', 'entreprise', 'kinesitherapie', 'tarifs', 'blog', 'contact', 'mentions'];
+    $pages = ['', 'velo', 'kinesitherapie', 'tarifs', 'blog', 'contact', 'mentions'];
     echo '<?xml version="1.0" encoding="UTF-8"?>' . "\n";
     echo '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">' . "\n";
     foreach (['fr', 'en'] as $code) {
@@ -63,7 +63,8 @@ if ($page === 'contact' && ($_SERVER['REQUEST_METHOD'] ?? 'GET') === 'POST') {
 }
 
 $known = ['home', 'coaching', 'velo', 'entreprise', 'kinesitherapie', 'tarifs', 'blog', 'article', 'contact', 'mentions', '404'];
-if (!in_array($page, $known, true)) {
+$offline = ['coaching', 'entreprise'];
+if (!in_array($page, $known, true) || in_array($page, $offline, true)) {
     http_response_code(404);
     $page = '404';
 }

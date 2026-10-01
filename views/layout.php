@@ -40,7 +40,10 @@ $switchHref = url_to($switchPage === 'home' ? 'home' : $switchPage, $other);
             <?php endif; ?>
             <?= $other === 'en' ? 'EN' : 'FR' ?>
         </a>
-        <a class="book" href="<?= e($C['links']['book']) ?>" target="_blank" rel="noopener"><?= e($C['book']) ?></a>
+        <a class="book" href="<?= e($C['links']['book']) ?>" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="4" y="5" width="16" height="15" rx="2" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M8 3.5v3.2M16 3.5v3.2M4 10h16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+            <?= e($C['book']) ?>
+        </a>
     </nav>
     <?php require __DIR__ . '/partials/follow.php'; ?>
 </header>

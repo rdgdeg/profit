@@ -9,50 +9,93 @@
             <a href="#<?= e($id) ?>"><?= e($label) ?></a>
         <?php endforeach; ?>
     </nav>
-    <section class="price-grid" id="suivi">
+    <p class="trial-banner"><?= e($T['trial']) ?></p>
+    <section class="price-grid" id="coaching">
         <?php foreach ($T['offers'] as $offer): ?>
             <article class="price-card">
-                <p class="kicker"><?= e($T['from']) ?> <?= e($offer['from']) ?></p>
                 <h2><?= e($offer['name']) ?></h2>
                 <table>
-                    <?php foreach ($offer['rows'] as [$period, $total, $per]): ?>
+                    <thead>
                         <tr>
-                            <th><?= e($period) ?></th>
-                            <td><?= e($total) ?></td>
-                            <td><?= e($per) ?></td>
+                            <?php foreach ($T['columns'] as $column): ?>
+                                <th><?= e($column) ?></th>
+                            <?php endforeach; ?>
                         </tr>
-                    <?php endforeach; ?>
+                    </thead>
+                    <tbody>
+                        <?php foreach ($offer['rows'] as $row): ?>
+                            <tr<?= !empty($row['best']) ? ' class="best"' : '' ?>>
+                                <th>
+                                    <?= e($row['period']) ?>
+                                    <?php if ($row['note'] !== ''): ?><span class="price-sub"><?= e($row['note']) ?></span><?php endif; ?>
+                                </th>
+                                <td>
+                                    <strong><?= e($row['once']) ?></strong>
+                                    <?php if ($row['once_note'] !== ''): ?><span class="price-sub"><?= e($row['once_note']) ?></span><?php endif; ?>
+                                </td>
+                                <td><strong><?= e($row['month']) ?></strong></td>
+                            </tr>
+                        <?php endforeach; ?>
+                    </tbody>
                 </table>
             </article>
         <?php endforeach; ?>
     </section>
-    <section class="includes">
-        <h2><?= e($T['includes']) ?></h2>
+    <p class="price-note"><?= e($T['note']) ?></p>
+
+    <section class="fit-block" id="fitting">
+        <div>
+            <h2><?= e($T['fit']['title']) ?></h2>
+            <table>
+                <?php foreach ($T['fit']['rows'] as [$name, $detail, $price]): ?>
+                    <tr>
+                        <th>
+                            <?= e($name) ?>
+                            <?php if (str_contains($name, 'Bioracer')): ?>
+                                <a href="<?= e($C['links']['bioracer']) ?>" target="_blank" rel="noopener">Bioracer</a>
+                            <?php endif; ?>
+                            <?php if ($detail !== ''): ?><span class="price-sub"><?= e($detail) ?></span><?php endif; ?>
+                        </th>
+                        <td><strong><?= e($price) ?></strong></td>
+                    </tr>
+                <?php endforeach; ?>
+            </table>
+            <p><a class="btn" href="<?= e($C['links']['book']) ?>" target="_blank" rel="noopener"><?= e($C['book']) ?></a></p>
+        </div>
+        <figure><img src="<?= e(asset('img/photo-bikefit.jpg')) ?>" alt="<?= $lang === 'fr' ? 'Étude posturale dynamique sur vélo' : 'Dynamic bike fit' ?>"></figure>
+    </section>
+
+    <section class="pack-block price-card" id="packs">
+        <h2><?= e($T['packs']['title']) ?></h2>
+        <p><?= e($T['packs']['lead']) ?></p>
+        <table>
+            <thead>
+                <tr>
+                    <?php foreach ($T['packs']['columns'] as $column): ?>
+                        <th><?= e($column) ?></th>
+                    <?php endforeach; ?>
+                </tr>
+            </thead>
+            <tbody>
+                <?php foreach ($T['packs']['rows'] as [$length, $discount, $best]): ?>
+                    <tr<?= $best ? ' class="best"' : '' ?>>
+                        <th><?= e($length) ?></th>
+                        <td><strong><?= e($discount) ?></strong></td>
+                    </tr>
+                <?php endforeach; ?>
+            </tbody>
+        </table>
+        <p class="price-note"><?= e($T['packs']['note']) ?></p>
+    </section>
+
+    <section class="perks" id="avantages">
+        <h2><?= e($T['perks']['title']) ?></h2>
         <ul class="point-grid">
-            <?php foreach ($T['online'] as $item): ?>
+            <?php foreach ($T['perks']['items'] as $item): ?>
                 <li><?= e($item) ?></li>
             <?php endforeach; ?>
         </ul>
-    </section>
-
-    <section class="fit-block" id="etude">
-        <div>
-            <p class="kicker"><?= e($T['from']) ?> <?= e($T['fit']['from']) ?></p>
-            <h2><?= e($T['fit']['title']) ?></h2>
-            <p><strong><?= e($T['fit']['road']) ?></strong></p>
-            <ul>
-                <?php foreach ($T['fit']['points'] as $item): ?>
-                    <li><?= e($item) ?></li>
-                <?php endforeach; ?>
-            </ul>
-            <ul class="option-list">
-                <li><?= e($T['fit']['aero']) ?> <a href="<?= e($C['links']['bioracer']) ?>" target="_blank" rel="noopener">Bioracer</a></li>
-                <li><?= e($T['fit']['second']) ?></li>
-                <li><?= e($T['fit']['cleats']) ?></li>
-            </ul>
-            <p><a class="btn" href="<?= e($C['links']['book']) ?>" target="_blank" rel="noopener"><?= e($C['book']) ?></a></p>
-        </div>
-        <figure><img src="<?= e(asset('img/photo-bikefit.jpg')) ?>" alt="Étude posturale dynamique sur vélo"></figure>
+        <p class="price-note"><?= e($T['perks']['note']) ?></p>
     </section>
 
     <section class="case-block" id="valise">
