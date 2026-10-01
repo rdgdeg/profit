@@ -21,6 +21,7 @@ $switchHref = url_to($switchPage === 'home' ? 'home' : $switchPage, $other);
     <link rel="stylesheet" href="<?= e(asset('css/app.css')) ?>">
 </head>
 <body>
+<div id="haut"></div>
 <a class="skip" href="#content"><?= $lang === 'fr' ? 'Aller au contenu' : 'Skip to content' ?></a>
 <header class="site-header">
     <a class="brand" href="<?= e(url_to('home')) ?>">
@@ -74,6 +75,7 @@ $switchHref = url_to($switchPage === 'home' ? 'home' : $switchPage, $other);
         <button type="button" data-cookie-choice="accepted"><?= e($C['cookies_ok']) ?></button>
     </div>
 </div>
+<a class="to-top" href="#haut"><?= $lang === 'fr' ? 'Haut de page' : 'Back to top' ?></a>
 <script src="<?= e(asset('js/app.js')) ?>"></script>
 </body>
 </html>

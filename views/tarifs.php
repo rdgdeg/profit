@@ -43,7 +43,7 @@
             <p><?= e($T['fit']['cleats']) ?></p>
             <p><a class="btn" href="<?= e($C['links']['book']) ?>" target="_blank" rel="noopener"><?= e($C['book']) ?></a></p>
         </div>
-        <figure><img src="<?= e(asset('img/bike-fit.webp')) ?>" alt=""></figure>
+        <figure><img src="<?= e(asset('img/photo-bikefit.jpg')) ?>" alt="Étude posturale dynamique sur vélo"></figure>
     </section>
 
     <section class="case-block">

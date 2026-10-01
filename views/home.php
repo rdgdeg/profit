@@ -17,7 +17,7 @@
 <section class="services reveal">
     <?php foreach ($C['services'] as [$slug, $heading, $sub, $text, $image]): ?>
         <a class="service-card" href="<?= e(url_to($slug)) ?>">
-            <img src="<?= e(asset('img/' . $image)) ?>" alt="">
+            <img src="<?= e(asset('img/' . $image)) ?>" alt=""<?= $image === 'photo-entreprise.jpg' ? ' class="pos-right"' : '' ?>>
             <div>
                 <p><?= e($sub) ?></p>
                 <h2><?= e($heading) ?></h2>

@@ -114,24 +114,37 @@ function handle_contact(array $C): void
     $email = trim((string) ($_POST['email'] ?? ''));
     $phone = trim((string) ($_POST['phone'] ?? ''));
     $message = trim((string) ($_POST['message'] ?? ''));
-    if ($name === '' || !filter_var($email, FILTER_VALIDATE_EMAIL) || mb_strlen($message) < 8) {
+    $subjectKey = (string) ($_POST['subject'] ?? '');
+    $reply = (string) ($_POST['reply'] ?? '');
+    $subjects = $C['contact']['subjects'] ?? [];
+    if (
+        $name === ''
+        || !filter_var($email, FILTER_VALIDATE_EMAIL)
+        || mb_strlen($message) < 8
+        || !isset($subjects[$subjectKey])
+        || !in_array($reply, ['email', 'phone'], true)
+    ) {
         header('Location: ' . url_to('contact', null, ['err' => '1']));
         exit;
     }
+    $subjectLabel = $subjects[$subjectKey];
+    $replyLabel = $reply === 'phone' ? $C['contact']['reply_phone'] : $C['contact']['reply_email'];
     $line = json_encode([
         'at' => date('c'),
         'lang' => lang(),
         'name' => $name,
         'email' => $email,
         'phone' => $phone,
+        'subject' => $subjectLabel,
+        'reply' => $replyLabel,
         'message' => $message,
     ], JSON_UNESCAPED_UNICODE);
     $store = ROOT . '/data/messages.jsonl';
     if (is_writable(dirname($store))) {
         file_put_contents($store, $line . "\n", FILE_APPEND | LOCK_EX);
     }
-    $subject = 'Message site Pro-Fit — ' . $name;
-    $body = $name . "\n" . $email . "\n" . $phone . "\n\n" . $message;
+    $subject = 'Message site Pro-Fit — ' . $subjectLabel . ' — ' . $name;
+    $body = $name . "\n" . $email . "\n" . $phone . "\n" . $subjectLabel . "\n" . $replyLabel . "\n\n" . $message;
     @mail('gain.adrien@gmail.com', $subject, $body, 'From: info@pro-fit.be' . "\r\n" . 'Reply-To: ' . $email);
     header('Location: ' . url_to('contact', null, ['ok' => '1']));
     exit;

@@ -54,6 +54,7 @@ return [
             ['kinesitherapie', 'Kinésithérapie'],
             ['blog', 'Blog'],
             ['tarifs', 'Tarifs'],
+            ['contact', 'Contact'],
         ],
         'book' => 'Réserver un bike fitting',
         'discover' => 'Découvrir',
@@ -63,16 +64,21 @@ return [
             'lead' => 'Studio rue de la Bruyère 240 à Marcinelle. Adrien Gain y réalise des études posturales sur vélo et suit des sportifs en triathlon, cyclisme, running et trail. Marion Van Genechten consulte en kinésithérapie générale et sportive.',
         ],
         'services' => [
-            ['coaching', 'Coaching sportif', 'Préparation physique', 'Studio à Charleroi et coaching à distance.', 'tile-1.png'],
-            ['velo', 'Plan d’entraînement', 'Étude posturale sur vélo', 'Confort, puissance et aérodynamisme.', 'bike-fit.webp'],
-            ['entreprise', 'Coaching en entreprise', 'Santé et performance', 'Le bien-être des équipes au centre du rendement.', 'tile-3.png'],
-            ['kinesitherapie', 'Kinésithérapie', 'Générale et sportive', 'Réadaptation, au cabinet ou à domicile.', 'hero-rot.webp'],
+            ['coaching', 'Coaching sportif', 'Préparation physique', 'Studio à Charleroi et coaching à distance.', 'photo-coaching.jpg'],
+            ['velo', 'Plan d’entraînement', 'Étude posturale sur vélo', 'Confort, puissance et aérodynamisme.', 'photo-bikefit.jpg'],
+            ['entreprise', 'Coaching en entreprise', 'Santé et performance', 'Le bien-être des équipes au centre du rendement.', 'photo-entreprise.jpg'],
+            ['kinesitherapie', 'Kinésithérapie', 'Générale et sportive', 'Réadaptation, au cabinet ou à domicile.', 'photo-kine.webp'],
         ],
         'pages' => [
             'coaching' => [
                 'title' => 'Coaching sportif – Préparation physique',
                 'kicker' => 'Studio à Marcinelle et suivi international',
-                'image' => 'walk.jpg',
+                'image' => 'photo-coaching.jpg',
+                'photos' => [
+                    ['photo-coaching.jpg', 'Préparation physique'],
+                    ['photo-coaching-trx.jpg', 'Personal training'],
+                    ['photo-coaching-plank.jpg', 'Renforcement'],
+                ],
                 'paragraphs' => [
                     'Après avoir ciblé l’objet de votre demande (minceur, prise de masse, souplesse, recherche de force…) et réalisé une anamnèse globale sur base de vos données propres (fréquences cardiaques, masse graisseuse et masse maigre…), mon rôle en tant que coach sportif diplômé sera d’établir un programme personnalisé.',
                     'D’un point de vue pratique, le studio de coaching sportif situé à Charleroi (Marcinelle) est équipé avec tout le matériel nécessaire : rack de renforcement musculaire, kettlebells, Swiss ball, TRX, BOSU, anneaux.',
@@ -89,7 +95,16 @@ return [
             'velo' => [
                 'title' => 'Plan d’entraînement et étude posturale sur vélo',
                 'kicker' => 'Cyclisme, running, trail, triathlon',
-                'image' => 'bike-fit.webp',
+                'image' => 'photo-bikefit.jpg',
+                'photos' => [
+                    ['photo-zwift.jpg', 'Entraînements sur votre plateforme favorite'],
+                    ['photo-nolio.png', 'Nöliö, le suivi du plan d’entraînement'],
+                    ['photo-analyse.jpg', 'Analyse vidéo du positionnement'],
+                    ['photo-selle.jpg', 'Capteur de pression de selle Velometrik'],
+                    ['photo-selles.webp', 'Essai de selles haut de gamme'],
+                    ['photo-aero-ecran.jpg', 'Gains en puissance et en vitesse, en temps réel'],
+                    ['photo-bikefit.jpg', 'Étude posturale dynamique sur vélo'],
+                ],
                 'paragraphs' => [
                     'Vous cherchez un plan d’entraînement en cyclisme, running, trail ou triathlon, avec un contact constant avec un entraîneur diplômé ?',
                     'Vous désirez optimiser votre positionnement sur votre vélo afin de trouver plus de confort, être plus performant et accroître votre aérodynamisme ?',
@@ -110,7 +125,7 @@ return [
             'entreprise' => [
                 'title' => 'Coaching en entreprise',
                 'kicker' => 'La santé de l’entreprise, c’est aussi celle des équipes',
-                'image' => 'tile-3.png',
+                'image' => 'photo-entreprise.jpg',
                 'paragraphs' => [
                     'Chaque personne étant unique, l’intervention d’un personal trainer prend tout son sens dans l’amélioration des facultés physiques et psychologiques des employés.',
                     'De plus en plus de personnes s’éloignent des activités sportives et subissent leur sédentarité : horaires, vie de famille, manque de stimulations. Les conséquences touchent les défenses de l’organisme, les capacités physiques et l’épanouissement.',
@@ -131,7 +146,7 @@ return [
             'kinesitherapie' => [
                 'title' => 'Kinésithérapie générale et sportive',
                 'kicker' => 'Marion Van Genechten · Marcinelle',
-                'image' => 'hero-rot.webp',
+                'image' => 'photo-kine.webp',
                 'paragraphs' => [
                     'Sur base de votre prescription médicale, un suivi de qualité est mis en place afin de répondre à vos attentes en réadaptation physique et fonctionnelle.',
                     'Au fil des consultations, le thérapeute propose un traitement adapté à la pathologie générale ou sportive, à l’écoute, en respectant votre rythme de progression.',
@@ -304,7 +319,7 @@ return [
                 'category' => 'Étude posturale',
                 'title' => 'L’art et la science de l’étude posturale sur vélo',
                 'excerpt' => 'Un bon ajustement aligne le vélo sur votre biomécanique : confort, efficacité, performance.',
-                'image' => 'bike-fit.webp',
+                'image' => 'photo-selle.jpg',
                 'body' => [
                     'Que vous soyez un cycliste occasionnel ou un cycliste sérieux, l’un des aspects les plus cruciaux de votre expérience à vélo est l’ajustement. Un bon ajustement personnalise le vélo pour la biomécanique de votre corps.',
                     'Pourquoi c’est important. L’ajustement ne se limite pas à la hauteur de selle ou à la position du guidon. Un vélo bien réglé limite l’inconfort, les douleurs articulaires et les blessures.',
@@ -320,7 +335,7 @@ return [
                 'category' => 'Plan d’entraînement',
                 'title' => 'L’entraînement polarisé : 80/20',
                 'excerpt' => '80 % à basse intensité, 20 % à haute intensité : performer sans s’épuiser.',
-                'image' => 'walk.jpg',
+                'image' => 'photo-polarise.jpg',
                 'body' => [
                     'Le principe 80/20 vise à optimiser les performances tout en limitant le surentraînement et la fatigue. L’intensité se répartit en deux zones : basse et haute.',
                     '80 % de l’entraînement se fait à intensité faible à modérée, pour l’endurance et l’aérobie : course, vélo ou natation à un rythme où l’on peut parler. 20 % se fait à intensité élevée : intervalles, sprints, efforts qui poussent le corps.',
@@ -347,7 +362,7 @@ return [
                 'category' => 'Compte rendu d’athlète',
                 'title' => 'Championnats du monde Ironman à Hawaï pour Marjolaine',
                 'excerpt' => 'Deux semaines après Kona : une qualification inattendue, et une journée à honorer.',
-                'image' => 'portrait-b.jpg',
+                'image' => 'photo-marjo.jpg',
                 'body' => [
                     'Deux semaines se sont écoulées depuis le Championnat du Monde Ironman à Kona. Assez pour que l’adrénaline retombe. Le corps a récupéré, le quotidien a repris. Et c’est dans cette normalité que je mesure vraiment ce que j’ai vécu.',
                     'Je ne m’attendais pas à être qualifiée pour Kona. Trois mois pour préparer un championnat du monde, entre le travail, la logistique du voyage et un apprentissage express du vélo contre-la-montre. C’était intense, parfois trop.',
@@ -366,6 +381,18 @@ return [
             'email' => 'E-mail',
             'phone' => 'Téléphone',
             'message' => 'Message',
+            'subject' => 'Sujet',
+            'subjects' => [
+                'coaching' => 'Coaching sportif',
+                'bikefit' => 'Bike fitting',
+                'plan' => 'Plan d’entraînement',
+                'entreprise' => 'Coaching en entreprise',
+                'kine' => 'Kinésithérapie',
+                'autre' => 'Autre demande',
+            ],
+            'reply' => 'Vous préférez être recontacté',
+            'reply_email' => 'Par e-mail',
+            'reply_phone' => 'Par téléphone',
             'send' => 'Envoyer',
             'success' => 'Message bien reçu. Nous vous répondons rapidement.',
             'error' => 'Merci de vérifier le nom, l’e-mail et le message.',
@@ -393,6 +420,7 @@ return [
             ['kinesitherapie', 'Physiotherapy'],
             ['blog', 'Blog'],
             ['tarifs', 'Prices'],
+            ['contact', 'Contact'],
         ],
         'book' => 'Book a bike fit',
         'discover' => 'Discover',
@@ -402,16 +430,21 @@ return [
             'lead' => 'A studio at 240 rue de la Bruyère in Marcinelle. Adrien Gain runs bike fits and coaches triathlon, cycling, running and trail. Marion Van Genechten sees patients for general and sports physiotherapy.',
         ],
         'services' => [
-            ['coaching', 'Sports coaching', 'Physical preparation', 'Studio in Charleroi and remote coaching.', 'tile-1.png'],
-            ['velo', 'Training plan', 'Dynamic bike fit', 'Comfort, power and aerodynamics.', 'bike-fit.webp'],
-            ['entreprise', 'Corporate coaching', 'Health and performance', 'Employee wellbeing at the centre of performance.', 'tile-3.png'],
-            ['kinesitherapie', 'Physiotherapy', 'General and sports', 'Rehab at the studio or at home.', 'hero-rot.webp'],
+            ['coaching', 'Sports coaching', 'Physical preparation', 'Studio in Charleroi and remote coaching.', 'photo-coaching.jpg'],
+            ['velo', 'Training plan', 'Dynamic bike fit', 'Comfort, power and aerodynamics.', 'photo-bikefit.jpg'],
+            ['entreprise', 'Corporate coaching', 'Health and performance', 'Employee wellbeing at the centre of performance.', 'photo-entreprise.jpg'],
+            ['kinesitherapie', 'Physiotherapy', 'General and sports', 'Rehab at the studio or at home.', 'photo-kine.webp'],
         ],
         'pages' => [
             'coaching' => [
                 'title' => 'Sports coaching – Physical preparation',
                 'kicker' => 'Studio in Marcinelle and international follow-up',
-                'image' => 'walk.jpg',
+                'image' => 'photo-coaching.jpg',
+                'photos' => [
+                    ['photo-coaching.jpg', 'Physical preparation'],
+                    ['photo-coaching-trx.jpg', 'Personal training'],
+                    ['photo-coaching-plank.jpg', 'Strength work'],
+                ],
                 'paragraphs' => [
                     'Once your goal is clear (fat loss, muscle gain, mobility, strength…) and a full assessment is done from your own data (heart rate, fat mass, lean mass…), my role as a qualified coach is to build a personal programme.',
                     'The coaching studio in Charleroi (Marcinelle) has the equipment you need: a strength rack, kettlebells, Swiss ball, TRX, BOSU and rings.',
@@ -428,7 +461,16 @@ return [
             'velo' => [
                 'title' => 'Training plans and dynamic bike fitting',
                 'kicker' => 'Cycling, running, trail, triathlon',
-                'image' => 'bike-fit.webp',
+                'image' => 'photo-bikefit.jpg',
+                'photos' => [
+                    ['photo-zwift.jpg', 'Training on the platform you already use'],
+                    ['photo-nolio.png', 'Nöliö, follow-up for the training plan'],
+                    ['photo-analyse.jpg', 'Video analysis of the position'],
+                    ['photo-selle.jpg', 'Velometrik saddle pressure sensor'],
+                    ['photo-selles.webp', 'Try a range of high-end saddles'],
+                    ['photo-aero-ecran.jpg', 'Power and speed gains, in real time'],
+                    ['photo-bikefit.jpg', 'Dynamic bike fitting'],
+                ],
                 'paragraphs' => [
                     'Looking for a cycling, running, trail or triathlon plan, with regular contact with a qualified coach?',
                     'Want a better position on the bike: more comfort, more performance, more aerodynamics?',
@@ -449,7 +491,7 @@ return [
             'entreprise' => [
                 'title' => 'Corporate coaching',
                 'kicker' => 'A healthier company starts with healthier people',
-                'image' => 'tile-3.png',
+                'image' => 'photo-entreprise.jpg',
                 'paragraphs' => [
                     'Because every person is different, a personal trainer can improve both the physical and psychological capacities of employees.',
                     'Many people drop sport and live with the consequences of sitting still: schedules, family life, lack of a spark. That shows up in immunity, physical capacity and how people feel at work.',
@@ -470,7 +512,7 @@ return [
             'kinesitherapie' => [
                 'title' => 'General and sports physiotherapy',
                 'kicker' => 'Marion Van Genechten · Marcinelle',
-                'image' => 'hero-rot.webp',
+                'image' => 'photo-kine.webp',
                 'paragraphs' => [
                     'With your medical prescription, care is set up around what you need in physical and functional rehab.',
                     'Session after session, treatment matches a general or sports condition, at your pace.',
@@ -643,7 +685,7 @@ return [
                 'category' => 'Bike fit',
                 'title' => 'The art and science of a dynamic bike fit',
                 'excerpt' => 'A proper fit matches the bike to your body: comfort, efficiency, performance.',
-                'image' => 'bike-fit.webp',
+                'image' => 'photo-selle.jpg',
                 'body' => [
                     'Whether you ride occasionally or seriously, fit is one of the most important parts of cycling. A good fit tunes the bike to your biomechanics.',
                     'Why it matters. Fit is more than saddle height or handlebar position. A well-set bike reduces discomfort, joint pain and injury.',
@@ -659,7 +701,7 @@ return [
                 'category' => 'Training plan',
                 'title' => 'Polarised training: 80/20',
                 'excerpt' => '80% easy, 20% hard: get faster without burning out.',
-                'image' => 'walk.jpg',
+                'image' => 'photo-polarise.jpg',
                 'body' => [
                     'The 80/20 principle aims to raise performance while limiting overtraining and fatigue. Intensity sits in two zones: low and high.',
                     '80% of training is easy to moderate, building endurance and aerobic capacity: running, cycling or swimming at a conversational pace. 20% is hard: intervals, sprints, efforts that push the body.',
@@ -686,7 +728,7 @@ return [
                 'category' => 'Athlete report',
                 'title' => 'Ironman World Championship in Hawaii for Marjolaine',
                 'excerpt' => 'Two weeks after Kona: an unexpected qualification, and a day worth honouring.',
-                'image' => 'portrait-b.jpg',
+                'image' => 'photo-marjo.jpg',
                 'body' => [
                     'Two weeks have passed since the Ironman World Championship in Kona. Long enough for the adrenaline to drop. The body has recovered, ordinary life is back. In that ordinary quiet, I can finally measure what I lived.',
                     'I did not expect to qualify for Kona. Three months to prepare a world championship, between work, travel logistics and a crash course on the time-trial bike. It was intense. Sometimes too much.',
@@ -705,6 +747,18 @@ return [
             'email' => 'Email',
             'phone' => 'Phone',
             'message' => 'Message',
+            'subject' => 'Subject',
+            'subjects' => [
+                'coaching' => 'Sports coaching',
+                'bikefit' => 'Bike fitting',
+                'plan' => 'Training plan',
+                'entreprise' => 'Corporate coaching',
+                'kine' => 'Physiotherapy',
+                'autre' => 'Something else',
+            ],
+            'reply' => 'How should we reply',
+            'reply_email' => 'By email',
+            'reply_phone' => 'By phone',
             'send' => 'Send',
             'success' => 'Message received. We will reply shortly.',
             'error' => 'Please check the name, email and message.',
