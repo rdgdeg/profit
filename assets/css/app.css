@@ -408,11 +408,16 @@ blockquote span { font-weight: 600; letter-spacing: 0.04em; }
     border: 0;
     border-radius: 0.95rem;
     padding: 1.05rem 1.15rem;
+    display: flex;
+    align-items: flex-start;
+    gap: 0.75rem;
 }
-.question-grid p:nth-child(4n + 1) { background: #e7efff; }
-.question-grid p:nth-child(4n + 2) { background: #e7f8ef; }
-.question-grid p:nth-child(4n + 3) { background: #fff3df; }
-.question-grid p:nth-child(4n + 4) { background: #ffe8e4; }
+.q-icon { width: 1.55rem; height: 1.55rem; flex-shrink: 0; margin-top: 0.12rem; }
+.question-grid p:nth-child(4n + 1) { background: #e7efff; color: #1736c9; }
+.question-grid p:nth-child(4n + 2) { background: #e7f8ef; color: #12815c; }
+.question-grid p:nth-child(4n + 3) { background: #fff3df; color: #b86a12; }
+.question-grid p:nth-child(4n + 4) { background: #ffe8e4; color: #d24b3c; }
+.question-grid p span { color: var(--ink); }
 .story {
     margin: 1.5rem 0;
     scroll-margin-top: 5.5rem;

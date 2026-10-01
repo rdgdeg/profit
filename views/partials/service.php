@@ -37,7 +37,10 @@
         <?php if (count($questions) >= 2): ?>
             <div class="question-grid">
                 <?php foreach ($questions as $paragraph): ?>
-                    <p><?= e($paragraph) ?></p>
+                    <p>
+                        <svg class="q-icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="10.2" fill="none" stroke="currentColor" stroke-width="1.7"/><path fill="currentColor" d="M12.05 6.1c-2.05 0-3.5 1.2-3.5 2.9h1.95c0-.8.6-1.3 1.5-1.3.85 0 1.45.45 1.45 1.15 0 .65-.35.95-1.15 1.45-.9.5-1.55 1.2-1.55 2.35v.5h1.95v-.4c0-.6.3-.9 1.05-1.35.9-.5 1.75-1.25 1.75-2.7 0-1.75-1.45-3-3.45-3zM12 16.35a1.05 1.05 0 1 0 .02 2.1 1.05 1.05 0 0 0-.02-2.1z"/></svg>
+                        <span><?= e($paragraph) ?></span>
+                    </p>
                 <?php endforeach; ?>
             </div>
         <?php else: ?>
